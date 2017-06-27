@@ -1,22 +1,25 @@
 /* Colour Variables: */
 /* Import Google Font*/
 @import url("https://fonts.googleapis.com/css?family=Source+Serif+Pro");
+body {
+  margin: 0; }
+
 /*---- NAVIGATION ----*/
 .nav {
   font-family: 'Source Serif Pro', serif; }
-  .nav > h4 {
-    padding: 0 7rem 1rem 7rem !important; }
-  .nav > li {
-    padding: 2px 7rem !important; }
-  .nav > li > a {
-    padding: 0 !important;
+  .nav.flex-column > h4 {
+    padding: 0 7rem 1rem 7rem; }
+  .nav.flex-column li {
+    padding: 2px 7rem; }
+  .nav.flex-column li > a {
+    padding: 0;
     color: #c9c9c9;
     font-size: 1.7rem;
     font-weight: 400;
     letter-spacing: 0.2rem;
     transition: all 0.5s ease; }
-  .nav > li > a:hover {
-    background-color: red !important;
+  .nav.flex-column > li > a:hover {
+    background-color: red;
     color: #fff; }
 
 nav {
@@ -38,12 +41,9 @@ nav {
     font-weight: 600; }
   nav hr {
     border-top: 1px solid #c9c9c9;
-    width: 12%;
-    position: relative;
-    top: 1rem;
-    left: -8rem;
-    right: 0;
-    bottom: 0; }
+    max-width: 2%;
+    min-width: 45px;
+    margin: 20px 19%; }
   nav ul.nav li p {
     margin: 0;
     padding: 0;
@@ -58,19 +58,19 @@ nav {
 .glyphicon {
   color: #c9c9c9; }
 
-.glyphicon-remove {
-  top: 3px !important; }
-  .glyphicon-remove.first {
+.nav-item .glyphicon-remove {
+  top: 3px; }
+  .nav-item .glyphicon-remove.first {
     left: -13rem; }
-  .glyphicon-remove.second {
+  .nav-item .glyphicon-remove.second {
     left: -6.5rem; }
 
-.glyphicon-earphone {
-  top: 0.2rem !important;
+.nav-item .glyphicon-earphone {
+  top: 0.2rem;
   left: -11.5rem; }
 
-.glyphicon-envelope {
-  top: 0.4rem !important;
+.nav-item .glyphicon-envelope {
+  top: 0.4rem;
   left: -20rem; }
 
 /*---- MAIN CONTENT ----*/
@@ -87,26 +87,28 @@ main {
     /*IE fallback*/
     transform: scale(1);
     transform: scale(1.02); }
-  main section {
+  main div.col-md-9 section {
     /*Override section*/
-    padding: 0 !important;
-    margin: 0 !important;
+    padding: 0;
+    margin: 0;
     /*Line removed < 991px - first row*/
-    min-height: 0 !important; }
+    min-height: 0; }
 
 /*---- RESPONSIVE ----*/
 /* Desktop */
-@media screen and (max-width: 1377px) {
-  .nav > li,
-  .nav > h4 {
-    padding: 2px 5rem !important; }
+@media screen and (min-width: 1025px) and (max-width: 1280px) {
+  ul.nav.flex-column li {
+    padding: 2px 4.2rem; }
+
+  .nav.flex-column > h4 {
+    padding: 0 7rem 1rem 4rem; }
 
   nav hr {
-    left: -6rem; } }
+    margin: 20px 12%; } }
 @media screen and (min-width: 992px) and (max-width: 1024px) {
-  .nav > li,
-  .nav > h4 {
-    padding: 2px 0 2px 5rem !important; }
+  .nav.flex-column > li,
+  .nav.flex-column > h4 {
+    padding: 2px 0 2px 5rem; }
 
   .glyphicon-envelope {
     left: -20rem; } }
@@ -136,30 +138,19 @@ main {
   nav footer {
     display: none; }
 
-  /*Reposition hr*/
-  nav hr {
-    border: 1px solid #000;
-    position: relative;
-    top: 28rem;
-    left: 0;
-    width: 7%; }
-
   ul.nav {
-    padding: 5% 0; }
-
-  .nav > li {
-    padding: 4px 4rem !important; }
+    padding: 8% 0; }
 
   nav ul.nav li p {
     float: none; }
 
-  .glyphicon-earphone {
-    top: 2.3rem !important;
+  .nav-item .glyphicon-earphone {
+    top: 2.3rem;
     left: -5.5rem;
     color: #000; }
 
-  .glyphicon-envelope {
-    top: 2.4rem !important;
+  .nav-item .glyphicon-envelope {
+    top: 2.4rem;
     left: -9.5rem;
     color: #000; }
 
@@ -178,34 +169,42 @@ main {
     top: -9999px;
     left: -9999px; }
 
+  nav.col-md-3 h1 {
+    margin-bottom: 0; }
+
+  .contact ul.nav.flex-column {
+    padding-top: 0;
+    margin: 5%; }
+
   span.glyphicon.glyphicon-remove {
     display: none; }
 
-  nav hr:nth-child(2) {
+  /*Hide horizontal line + style*/
+  nav.col-md-3:not(.menu-filer) > hr,
+  div#menu-about hr {
     display: none; }
 
-  nav h1 {
-    margin-bottom: 0 !important; }
+  nav.col-md-3 hr {
+    margin: 0 46% 8rem;
+    border-top: 2px solid #000;
+    min-width: 65px; }
 
-  .contact ul.nav {
-    padding-top: 0 !important;
-    margin: 6%; } }
+  ul.nav.flex-column h4 {
+    color: #898989; } }
 @media screen and (min-width: 576px) and (max-width: 991px) {
   /*Images set to 50% medium screen*/
-  main img {
+  main section.col-md-4 img {
     width: 50%;
     height: auto;
     float: left; } }
 /* Mobile */
 /*Revert to 100%*/
 @media screen and (max-width: 575px) {
-  main img {
+  main section.col-md-4 img {
     width: 100%;
-    height: auto; } }
-/* NEEDS FIX:
-  - hr from moving on responsive
-  - bulk medium screen Contact section
-  - Animated "Hello" keyframe - fade in
-*/
+    height: auto; }
+
+  nav.col-md-3 hr {
+    margin: 0 41% 8rem; } }
 
 /*# sourceMappingURL=style.css.map */
