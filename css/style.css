@@ -1,49 +1,220 @@
-/*
-Error: Invalid CSS after "body { margin 0": expected "{", was "; }"
-        on line 9 of style.scss
+/* Colour Variables: */
+/* Import Google Font*/
+@import url("https://fonts.googleapis.com/css?family=Source+Serif+Pro");
+body {
+  margin: 0; }
 
-4: $grey: #c9c9c9;
-5: 
-6: /* Import Google Font*\/
-7: @import url('https://fonts.googleapis.com/css?family=Source+Serif+Pro');
-8: 
-9: body { margin 0; }
-10: 
-11: 
-12: /*---- NAVIGATION ----*\/
-13: .nav {
-14:     font-family: 'Source Serif Pro', serif;
+/*---- NAVIGATION ----*/
+.nav {
+  font-family: 'Source Serif Pro', serif; }
+  .nav.flex-column > h4 {
+    padding: 0 7rem 1rem 7rem; }
+  .nav.flex-column li {
+    padding: 2px 7rem; }
+  .nav.flex-column li > a {
+    padding: 0;
+    color: #c9c9c9;
+    font-size: 1.7rem;
+    font-weight: 400;
+    letter-spacing: 0.2rem;
+    transition: all 0.5s ease; }
+  .nav.flex-column > li > a:hover {
+    background-color: red;
+    color: #fff; }
 
-Backtrace:
-style.scss:9
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/scss/parser.rb:1207:in `expected'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/scss/parser.rb:1137:in `expected'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/scss/parser.rb:1132:in `tok!'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/scss/parser.rb:665:in `block'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/scss/parser.rb:735:in `declaration_or_ruleset'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/scss/parser.rb:685:in `block_child'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/scss/parser.rb:674:in `block_contents'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/scss/parser.rb:666:in `block'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/scss/parser.rb:658:in `ruleset'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/scss/parser.rb:684:in `block_child'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/scss/parser.rb:677:in `block_contents'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/scss/parser.rb:125:in `stylesheet'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/scss/parser.rb:41:in `parse'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/engine.rb:406:in `_to_tree'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/engine.rb:381:in `_render_with_sourcemap'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/engine.rb:298:in `render_with_sourcemap'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/plugin/compiler.rb:209:in `each'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/plugin/compiler.rb:473:in `on_file_changed'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/plugin/compiler.rb:331:in `block in watch'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/vendor/listen/lib/listen/listener.rb:252:in `on_change'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/vendor/listen/lib/listen/listener.rb:290:in `block in initialize_adapter'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/vendor/listen/lib/listen/adapters/polling.rb:48:in `poll_changed_directories'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/vendor/listen/lib/listen/adapter.rb:299:in `block in start_poller'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Invalid CSS after \"body { margin 0\": expected \"{\", was \"; }\"\A         on line 9 of style.scss\A \A 4: $grey: #c9c9c9;\A 5: \A 6: /* Import Google Font*/\A 7: @import url('https://fonts.googleapis.com/css?family=Source+Serif+Pro');\A 8: \A 9: body { margin 0; }\A 10: \A 11: \A 12: /*---- NAVIGATION ----*/\A 13: .nav {\A 14:     font-family: 'Source Serif Pro', serif;"; }
+nav {
+  /*Animated - Fade in effect, "Hello"*/ }
+  nav h1 {
+    font-size: 7rem;
+    margin: 8rem 0;
+    text-align: center;
+    font-weight: 600;
+    color: #000;
+    animation: fadein 5s; }
+@keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+  nav h4 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    letter-spacing: 0.2rem; }
+  nav hr {
+    border-top: 1px solid #c9c9c9;
+    max-width: 2%;
+    min-width: 45px;
+    margin: 20px 19%; }
+  nav ul.nav li p {
+    margin: 0;
+    padding: 0;
+    float: left; }
+  nav a.mailto {
+    color: #000; }
+  nav footer p {
+    margin: 5rem 0;
+    text-align: center; }
+
+/*glyphicon*/
+.glyphicon {
+  color: #c9c9c9; }
+
+.nav-item .glyphicon-remove {
+  top: 3px; }
+  .nav-item .glyphicon-remove.first {
+    left: -13rem; }
+  .nav-item .glyphicon-remove.second {
+    left: -6.5rem; }
+
+.nav-item .glyphicon-earphone {
+  top: 0.2rem;
+  left: -11.5rem; }
+
+.nav-item .glyphicon-envelope {
+  top: 0.4rem;
+  left: -20rem; }
+
+/*---- MAIN CONTENT ----*/
+/*Image 100% width, cover gutters*/
+main {
+  /*Transform and transition*/ }
+  main img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s linear; }
+  main img:hover {
+    opacity: 0.6;
+    filter: alpha(opacity=60);
+    /*IE fallback*/
+    transform: scale(1);
+    transform: scale(1.02); }
+  main div.col-md-9 section {
+    padding: 0;
+    margin: 0;
+    /*Line removed < 991px - first row*/
+    min-height: 0; }
+
+/*---- RESPONSIVE ----*/
+/* Desktop */
+@media screen and (min-width: 1025px) and (max-width: 1377px) {
+  ul.nav.flex-column li {
+    padding: 2px 4.7rem; }
+
+  ul.nav.flex-column > h4 {
+    padding-left: 4.7rem; }
+
+  nav hr {
+    margin: 20px 14%; } }
+@media screen and (min-width: 1025px) and (max-width: 1280px) {
+  ul.nav.flex-column li {
+    padding: 2px 4.2rem; }
+
+  ul.nav.flex-column > h4 {
+    padding: 0 7rem 1rem 4rem; }
+
+  nav hr {
+    margin: 20px 12%; } }
+@media screen and (min-width: 992px) and (max-width: 1024px) {
+  .nav.flex-column > li,
+  .nav.flex-column > h4 {
+    padding: 2px 0 2px 5rem; }
+
+  .glyphicon-envelope {
+    left: -20rem; } }
+/* Tablet */
+@media screen and (min-width: 576px) and (max-width: 991px), (max-width: 575px) {
+  /*Center content*/
+  header {
+    text-align: center; }
+
+  /*Flexbox order*/
+  nav.col-md-3 {
+    display: flex;
+    flex-direction: column;
+    padding: 0; }
+
+  /*Reorder divs*/
+  div#contact {
+    order: 1; }
+
+  div#menu-about {
+    order: 2; }
+
+  div#menu-filter {
+    order: 3; }
+
+  /*Hide footer*/
+  nav footer {
+    display: none; }
+
+  ul.nav {
+    padding: 6% 0; }
+
+  nav ul.nav li p {
+    float: none; }
+
+  .nav-item .glyphicon-earphone {
+    top: 2.3rem;
+    left: -5.5rem;
+    color: #000; }
+
+  .nav-item .glyphicon-envelope {
+    top: 2.4rem;
+    left: -9.5rem;
+    color: #000; }
+
+  .contact,
+  nav a.mailto {
+    color: #c9c9c9; }
+
+  .menu-about,
+  .menu-filter {
+    background-color: #282828;
+    color: #c9c9c9; }
+
+  /*Hide, visible for sr*/
+  .menu-about h4 {
+    position: absolute;
+    top: -9999px;
+    left: -9999px; }
+
+  nav.col-md-3 h1 {
+    margin-bottom: 0; }
+
+  .contact ul.nav.flex-column {
+    padding-top: 0;
+    margin: 5%; }
+
+  /*Hide "x"*/
+  span.glyphicon.glyphicon-remove {
+    display: none; }
+
+  /*Hide horizontal line + style*/
+  nav.col-md-3:not(.menu-filer) > hr,
+  div#menu-about hr {
+    display: none; }
+
+  nav.col-md-3 hr {
+    margin: -4rem 46.5% 9rem;
+    border-top: 2px solid #000;
+    min-width: 65px; }
+
+  ul.nav.flex-column h4 {
+    color: #898989; } }
+@media screen and (min-width: 576px) and (max-width: 991px) {
+  /*Images set to 50% medium screen*/
+  main section.col-md-4 img {
+    width: 50%;
+    height: auto;
+    float: left; } }
+/* Mobile */
+/*Revert to 100%*/
+@media screen and (max-width: 575px) {
+  main section.col-md-4 img {
+    width: 100%;
+    height: auto; }
+
+  nav.col-md-3 hr {
+    margin: 0 41% 8rem; } }
+
+/*# sourceMappingURL=style.css.map */
