@@ -6,9 +6,9 @@ $grey: #c9c9c9;
 /* Import Google Font*/
 @import url('https://fonts.googleapis.com/css?family=Source+Serif+Pro');
 
-body {
-  margin:0;
-}
+body { margin 0; }
+
+
 /*---- NAVIGATION ----*/
 .nav {
     font-family: 'Source Serif Pro', serif;
@@ -50,6 +50,7 @@ nav {
   h4 {
     font-size: 1.8rem;
     font-weight: 600;
+    letter-spacing: 0.2rem;
   }
   hr {
     border-top: 1px solid $grey;
@@ -107,7 +108,6 @@ main {
       transform: scale(1.02);
     }
   div.col-md-9 section {
-    /*Override section*/
     padding: 0;
     margin: 0;
     /*Line removed < 991px - first row*/
@@ -117,9 +117,14 @@ main {
 
 /*---- RESPONSIVE ----*/
 /* Desktop */
+@media screen and (min-width: 1025px) and (max-width: 1377px) {
+  ul.nav.flex-column li   { padding: 2px 4.7rem; }
+  ul.nav.flex-column > h4 { padding-left: 4.7rem; }
+  nav hr { margin: 20px 14%; }
+}
 @media screen and (min-width: 1025px) and (max-width: 1280px) {
-  ul.nav.flex-column li { padding: 2px 4.2rem; }
-  .nav.flex-column > h4 { padding: 0 7rem 1rem 4rem; }
+  ul.nav.flex-column li   { padding: 2px 4.2rem; }
+  ul.nav.flex-column > h4 { padding: 0 7rem 1rem 4rem; }
   nav hr { margin: 20px 12%; }
 }
 @media screen and (min-width: 992px) and (max-width: 1024px) {
@@ -144,7 +149,7 @@ main {
     /*Hide footer*/
     nav footer { display: none; }
 
-    ul.nav { padding: 8% 0; }
+    ul.nav { padding: 6% 0; }
     nav ul.nav li p { float: none; }
     .nav-item .glyphicon-earphone {
       top: 2.3rem;
@@ -174,13 +179,14 @@ main {
       padding-top: 0;
       margin: 5%;
     }
+    /*Hide "x"*/
     span.glyphicon.glyphicon-remove { display: none; }
     
     /*Hide horizontal line + style*/
     nav.col-md-3:not(.menu-filer) > hr,
     div#menu-about hr { display: none; }
     nav.col-md-3 hr {
-      margin: 0 46% 8rem;
+      margin: -4rem 46.5% 9rem;
       border-top: 2px solid #000;
       min-width: 65px;
     }
